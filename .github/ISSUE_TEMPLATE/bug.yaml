@@ -1,14 +1,58 @@
-name: "🐞 Bug"
-description: File a bug/issue
-title: "[BUG] This a bug"
-labels: ["Bug", "Needs Triage"]
+name: Bug Report
+description: Report a bug for this project.
+title: "[Bug]: "
+labels: ["bug"]
 body:
-  - type: markdown
+  - type: input
+    id: title
     attributes:
-      value: |
-        ## Anything else?
-        * Links? References? Anything that will give us more context about the issue you are encountering!
-        * Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
- - type: textarea
+      label: "Bug Title"
+      description: "What is the title of the bug?"
+      placeholder: "Enter title here"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
     attributes:
-      label: Name
+      label: "Bug Description"
+      description: "Please describe the bug in detail."
+      placeholder: "Enter description here"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to Reproduce"
+      description: "Please provide the steps to reproduce the bug."
+      placeholder: "Enter steps here"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected Behavior"
+      description: "What is the expected behavior?"
+      placeholder: "Enter expected behavior here"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: "Actual Behavior"
+      description: "What is the actual behavior?"
+      placeholder: "Enter actual behavior here"
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: "Version"
+      description: "What version of the project are you using?"
+      placeholder: "Enter version here"
+    validations:
+      required: true
