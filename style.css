@@ -32,6 +32,18 @@ h1 {
     cursor: pointer;
 }
 
+.x::before {
+    content: "X";
+    font-size: 48px;
+    color: #000;
+}
+
+.circle::before {
+    content: "O";
+    font-size: 48px;
+    color: #000;
+}
+
 #restartButton {
     margin-top: 20px;
     padding: 10px 20px;
